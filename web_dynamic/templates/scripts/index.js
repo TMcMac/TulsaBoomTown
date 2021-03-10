@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $.get('/api/v1/status/', function (data) {
+  $.get('https://tulsaboomtown.tech/status', function (data) {
 
     if (data.status === 'OK') {
       console.log('API IS WORKING');
