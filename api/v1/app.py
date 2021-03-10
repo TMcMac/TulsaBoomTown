@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ the main Flask application for our API """
+from models import storage
 from api.v1.views import app_views
 from flask import Flask, jsonify
 
@@ -9,7 +10,7 @@ app.register_blueprint(app_views)
 @app.teardown_appcontext
 def close_db(error):
     """ closes the connection to MySQL """
-    pass
+    storage.close();
 
 
 @app.errorhandler(404)
