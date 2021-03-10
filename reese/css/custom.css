@@ -1,0 +1,315 @@
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Logo Styling
+- Text Styling
+- Navigation
+- Header
+- Image Holder
+- Boxes
+- Headshot Boxes
+- Footer
+*/
+
+/* Logo Styling
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.logo {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-top: -70px;
+}
+
+
+/* Text Styling
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.centered-text {
+    text-align: center;
+    display: block;
+    padding: 200px 0 0 0;
+}
+
+.centered {
+    text-align: center;
+    margin: 60px 0 0 0;
+}
+
+.centered-only {
+    text-align: centered;
+}
+
+.textbox {
+    border: 1px solid black;
+    margin: 30px 0 0 0;
+    padding: 10px;
+}
+
+.textbox-centered {
+    border: 1px solid black;
+    margin: 30px 0 0 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.float-right {
+    float: right;
+}
+
+.title {
+    margin: 0;
+}
+
+.display-none {
+    visibility: hidden;
+}
+
+.marginNone {
+    margin: 0px;
+}
+
+/* Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.navigation {
+    display: inline-block;
+    float: right;
+    margin: 5px 10px 0 0;
+}
+
+.navigation .slash:after {
+    display: inline-block;
+    color: #000;
+    content: '/';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 10px;
+    border-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+header {
+    height: 45px;
+    border-bottom: black solid 1px;
+}
+
+/* Image Holder
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.image-holder {
+    width: 100%;
+    height: 600px;
+    background-image: url("../images/1-tulsa-skyline-bleu-bri.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+/* Boxes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Oppertunities to Learn and Grow
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.oppBox-tulsaRemote {
+    background-image: url(../images/tulsaRemote.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 400px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+}
+
+.oppBox-holberton {
+    background-image: url(../images/holberton.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 400px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+}
+
+.oppBox-36DNorth {
+    background-image: url(../images/36North-400x400.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 400px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+}
+
+.oppBox-fifthFloor {
+    background-image: url(../images/cityHall.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 400px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+}
+
+/* Carousel
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.carousel-box {
+    width: 100%;
+    height: 250px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+}
+
+/* Tech Associations and Groups
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.techAssoc_box--Techlahoma {
+    width: 100%;
+    height: 250px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+
+    background-image: url(../images/techlahoma.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.techAssoc_box--TulsaInnoLabs {
+    width: 100%;
+    height: 250px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: #001f28;
+    background-position: center;
+
+    background-image: url(../images/tulsaInnoLabs.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.techAssoc_box--WomeninTech {
+    width: 100%;
+    height: 250px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: #fff;
+    background-position: center;
+
+    background-image: url(../images/womenInTech.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.techAssoc_box--TYPROS {
+    width: 100%;
+    height: 250px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color:#42c5d2;
+    background-position: center;
+
+    background-image: url(../images/typros.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* What Tulsa has to Offer Boxes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.offer_box-route66 {
+    width: 100%;
+    height: 250px;
+    margin: 20px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+    background-position: center;
+
+    background-image: url(../images/OK66.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.offer_box-gathering {
+    width: 100%;
+    height: 250px;
+    margin: 20px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+    background-position: center;
+
+    background-image: url(../images/gatheringPlace.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.offer_box-arts-n-culture {
+    width: 100%;
+    height: 250px;
+    margin: 20px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+    background-position: center;
+
+    background-image: url(../images/liveMusic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.offer_box_text {
+    height: 250px;
+    margin: 20px 0 0 0;
+}
+
+/* Headshot Boxes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.headshotBox--Blake {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+}
+
+.headshotBox--Jacob {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+}
+
+.headshotBox--Reese {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+}
+
+.headshotBox--Tim {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+}
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    margin: 30px 0 0 0;
+    padding: 30px 0 0 0;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: gray;
+}
