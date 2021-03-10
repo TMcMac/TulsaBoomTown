@@ -1,17 +1,27 @@
-let display = {};
-
 $(document).ready(function () {
 
-  $.get('https://tulsaboomtown.tech/companies', function (data) {
-
-    display = data;
-
+  $.ajax({
+    url: 'https://tulsaboomtown.tech/companies',
+    type: 'GET',
+    success: function (data) {
+      populate(data);
+    },
+    error: function () {
+      failure();
+    }
   });
 
 });
 
-$(document).ajaxStop(function () {
+function populate (data) {
+  let i;
+  console.log('Company names in our database:');
 
-  console.log(display);
+  for (i = 0; i < data.length; i++) {
+    console.log(data[i].name);
+  }
+}
 
-});
+function failure () {
+  console.log('No company data found.');
+}
