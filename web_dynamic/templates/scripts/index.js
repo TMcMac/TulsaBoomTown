@@ -1,13 +1,17 @@
+let display = {};
+
 $(document).ready(function () {
 
-  $.get('https://tulsaboomtown.tech/status', function (data) {
+  $.get('https://tulsaboomtown.tech/companies', function (data) {
 
-    if (data.status === 'OK') {
-      console.log('API IS WORKING');
-    } else {
-      console.log('Doesnt work');
-    }
+    display = data;
 
   });
+
+});
+
+$(document).ajaxStop(function () {
+
+  console.log(display);
 
 });
