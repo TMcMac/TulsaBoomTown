@@ -19,14 +19,10 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/skeleton.css">
-  <link rel="stylesheet" href="styles/custom.css">
-
-  <!-- Javascript
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="scripts/index.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/carousel.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -45,9 +41,10 @@
       <ul>
         <li class="navigation"><a href="./aboutUs.html">Our Team</a></li>
         <li class="navigation"><a href="#"><div class="slash">Jobs</div></a></li>
-        <li class="navigation"><a href="#"><div class="slash">Tulsa Love</div></a></li>
-        <li class="navigation"><a href="#"><div class="slash">T-Combinator</div></a></li>
-        <li class="navigation"><a href="#"><div class="slash">Learn & Grow</div></a></li>
+        <li class="navigation"><a href="#tulsaOffer"><div class="slash">Tulsa Love</div></a></li>
+        <li class="navigation"><a href="#tCombinator"><div class="slash">T-Combinator</div></a></li>
+        <li class="navigation"><a href="#assoc&Groups"><div class="slash">Tech Associations & Groups</div></a></li>
+        <li class="navigation"><a href="#learn&Grow"><div class="slash">Learn & Grow</div></a></li>
       </ul>
     </nav>
   </header>
@@ -81,6 +78,7 @@
   
   <!-- First 2 Boxes
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <section id="learn&Grow"></section>
   <div class="container">
     <h2 class="centered">Oppertunities to Learn and Grow</h2>
     
@@ -129,29 +127,74 @@
 
   <!-- Carousel / Tech Co's in Tulsa
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <section id="tCombinator"></section>
   <div class="container">
     <h2 class="centered">T-Combinator - Tech Companies in Tulsa</h2>
   </div><!--container-->
   
   <div class="container">
-    <div class="row">
-      <div class="one-third column">
-        <div class="carousel-box"></div><!--carousel-box-->
-        <p>Company One</p>
-      </div><!--one-third column-->
-      <div class="one-third column">
-        <div class="carousel-box"></div><!--carousel-box-->
-        <p>Company Two</p>
-      </div><!--one-third column-->
-      <div class="one-third column">
-        <div class="carousel-box"></div><!--carousel-box-->
-        <p>Company Three</p>
-      </div><!--one-third column-->
-    </div><!--row-->
-  </div><!--container-->
+  <div class="slider">
+    <input type="radio" name="toggle" id="btn-1" checked>
+    <input type="radio" name="toggle" id="btn-2">
+    <input type="radio" name="toggle" id="btn-3">
+  
+    <div class="slider-controls">
+      <label for="btn-1"></label>
+      <label for="btn-2"></label>
+      <label for="btn-3"></label>
+    </div>
+  
+    <ul class="slides">
+      
+      <li class="slide">
+        <div class="slide-content">
+          <h3 class="slide-title">SeqTek</h3>
+          <p class="industries slide-font"><strong>Industry: </strong>web_dev, consulting</p>
+          <p class="tech-stack slide-font"><strong>Tech Stack: </strong>C#, Java, Javascript, Python, and C++</p>
+          <p class="employees slide-font"><strong>Number of Employees: </strong>35</p>
+          <p class="co-link slide-font"><strong>Website: </strong><a href="https://www.seqtek.com/">https://www.seqtek.com/</a></p>
+          <p class="job-link slide-font"><strong>Job Board Link: </strong><a href="https://seqtek.com/careers/career-opportunities/">https://seqtek.com/careers/career-opportunities/</a></p>
+        </div>
+        <p class="company-logo">
+          <img src="../images/logos" alt="SeqTek Logo" width="320" height="240">
+        </p>
+      </li>
+
+      <li class="slide">
+        <div class="slide-content">
+          <h3 class="slide-title">SeqTek</h3>
+          <p class="industries slide-font"><strong>Industry: </strong>web_dev, consulting</p>
+          <p class="tech-stack slide-font"><strong>Tech Stack: </strong>C#, Java, Javascript, Python, and C++</p>
+          <p class="employees slide-font"><strong>Number of Employees: </strong>35</p>
+          <p class="co-link slide-font"><strong>Website: </strong><a href="https://www.seqtek.com/">https://www.seqtek.com/</a></p>
+          <p class="job-link slide-font"><strong>Job Board Link: </strong><a href="https://seqtek.com/careers/career-opportunities/">https://seqtek.com/careers/career-opportunities/</a></p>
+        </div>
+        <p class="company-logo">
+          <img src="../images/logos" alt="SeqTek Logo" width="320" height="240">
+        </p>
+      </li>
+
+      <li class="slide">
+        <div class="slide-content">
+          <h3 class="slide-title">SeqTek</h3>
+          <p class="industries slide-font"><strong>Industry: </strong>web_dev, consulting</p>
+          <p class="tech-stack slide-font"><strong>Tech Stack: </strong>C#, Java, Javascript, Python, and C++</p>
+          <p class="employees slide-font"><strong>Number of Employees: </strong>35</p>
+          <p class="co-link slide-font"><strong>Website: </strong><a href="https://www.seqtek.com/">https://www.seqtek.com/</a></p>
+          <p class="job-link slide-font"><strong>Job Board Link: </strong><a href="https://seqtek.com/careers/career-opportunities/">https://seqtek.com/careers/career-opportunities/</a></p>
+        </div>
+        <p class="company-logo">
+          <img src="../images/logos" alt="SeqTek Logo" width="320" height="240">
+        </p>
+      </li>
+
+    </ul>
+  </div><!--slider-->
+</div><!--container-->
 
   <!-- Tech Associations and Groups
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <section id="assoc&Groups"></section>
   <div class="container">
     <h2 class="centered">Tech Associations and Groups</h2>
   </div><!--container-->
@@ -226,6 +269,7 @@
 
   <!-- What Tulsa has to Offer
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <section id="tulsaOffer"></section>
   <div class="container">
     <h2 class="centered">What Tulsa has to Offer</h2>
   </div><!--container-->
@@ -240,6 +284,10 @@
       <section class="six columns">
         <div class="offer_box_text">
           <h4>Historic Route 66</h4>
+          <p>Traveling on Route 66 might be the most iconic road trip route in the U.S. Known as “The Mother Road”.  Route 66 made inter-continental travel from Illinois to Los Angeles possible for millions.  In Oklahoma, Route 66 spans from the north-eastern to south-central portions of the state.  A few highlights include: The Oklahoma Route 66 Museum in Clinton, The Coleman Theatre in Miami, The Blue Whale in Catoosa, Totem Pole Park in Chelsea, The Seaba Station Motorcycle Museum, Homestead on Route 66 in Yukon.
+
+ 
+          </p>
         </div><!--offer_box_text-->
       </section><!--five columnas-->
     </div>
@@ -251,7 +299,8 @@
     
       <section class="six columns">
         <div class="offer_box_text">
-          <h4>The Gathering Place & Science Center</h4>
+          <h4>The Gathering Place</h4>
+          <p>We are Gathering Place.  We remain consistent in our mission, as a project led by George Kaiser Family Foundation, that we all become united in our love for our community. Relatives, close friends, neighbors, we are all family. We are united from every zip code, from the city to the suburbs, from the river to the hills, from the north to the south, from the west to the east. Gathering Place is the ultimate expression of Tulsa’s spirit of unity. A place for everyone.</p>
         </div><!--offer_box_text-->
       </section><!--five columnas-->
     </div>
@@ -263,7 +312,8 @@
     
       <section class="six columns">
         <div class="offer_box_text">
-          <h4>Live Music, Arts & Culture in a non-Covid year</h4>
+          <h4>Live Music, Arts & Culture</h4>
+          <p>Tulsa's rich and vibrant music & arts scene paves the way for our local communities culture to flourish.  Tulsa's local music and art help to build our economy, improve our education system, help to preserve our local heritage and culture, and provide an over all enhanced quality of life for all to enjoy.</p>
         </div><!--offer_box_text-->
       </section><!--five columnas-->
     </div>
@@ -273,7 +323,13 @@
   <!-- Plan a Visit!
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <h2 class="textbox-centered">Plan a Visit:   <a href="https://roottulsa.com/">Root Tulsa</a></h2>
+    <div class="row">
+      <div class="six columns offset-by-three">
+        <button class="button-primary marginTop35">
+          <h3 class="textbox-centered">Plan a Visit:   <a href="https://roottulsa.com/">Root Tulsa</a></h3>
+        </button>
+      </div>
+    </div>
   </div><!--container-->
 
   <!-- Footer
