@@ -2,6 +2,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 - Logo Styling
 - Text Styling
+- Margin Add-Ons
 - Navigation
 - Header
 - Image Holder
@@ -44,8 +45,7 @@
 }
 
 .textbox-centered {
-    border: 1px solid black;
-    margin: 30px 0 0 0;
+    margin: 0px;
     padding: 10px;
     text-align: center;
 }
@@ -65,6 +65,13 @@
 .marginNone {
     margin: 0px;
 }
+
+/* Margin Add-Ons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.marginTop35 { 
+    margin-top: 35px;
+}
+
 
 /* Navigation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -272,6 +279,11 @@ header {
     margin: 10px 0 0 0;
     border: 1px black solid;
     background-color: rgb(155, 155, 155);
+
+    background-position: center;
+    background-image: url(../images/headshot--blake.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .headshotBox--Jacob {
@@ -280,6 +292,11 @@ header {
     margin: 10px 0 0 0;
     border: 1px black solid;
     background-color: rgb(155, 155, 155);
+
+    background-position: center;
+    background-image: url(../images/headshot--jacob.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .headshotBox--Reese {
@@ -288,6 +305,11 @@ header {
     margin: 10px 0 0 0;
     border: 1px black solid;
     background-color: rgb(155, 155, 155);
+
+    background-position: center;
+    background-image: url(../images/headshot--reese.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .headshotBox--Tim {
@@ -296,6 +318,11 @@ header {
     margin: 10px 0 0 0;
     border: 1px black solid;
     background-color: rgb(155, 155, 155);
+
+    background-position: center;
+    background-image: url(../images/headshot--tim.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 /* Footer
