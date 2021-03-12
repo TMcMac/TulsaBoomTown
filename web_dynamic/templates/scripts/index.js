@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
   $.ajax({
-    url: 'https://tulsaboomtown.tech/companies',
+    url: 'https://tulsaboomtown.tech/api/companies',
     type: 'GET',
     success: function (data) {
       populate(data);
