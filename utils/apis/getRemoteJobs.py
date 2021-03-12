@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
-import json
-import requests
+def remote_jobs_get():
+    import json
+    import requests
 
-if __name__ == '__main__':
     base_url = 'https://remotive.io/api/remote-jobs?'
     company = "" #this can be included as: 'company_name=<name>' to search for a specific company
     search = "" #this can be included as: 'search=front%20end' to look for a specific keyword(s)
-    limit = "limit=5" #this can be included as: 'limit=5' to limit results
-    catagory = "category=software-dev" #this can be included in the url as: 'category=software-dev' to search a catagory
+    limit = "limit=50" #this can be included as: 'limit=5' to limit results
+    category = "category=software-dev" #this can be included in the url as: 'category=software-dev' to search a catagory
     """
     The catagories that we can use are a specific list as follows:
     {"id": 19, "name": "Software Development", "slug": "software-dev"},
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     """
 
     # r is our main request and will hold the response code
-    r = requests.get(base_url + catagory + '?' + limit)
+    r = requests.get(base_url + limit)
 
     # payload holds the json payload from requests
     payload = r.json()
@@ -47,8 +47,8 @@ if __name__ == '__main__':
     cleaned_jobs = []
 
     # desired info are the things we want out of the raw jobs data, description is something we should add but it is a mess of html
-    desired_info = ['title','url','catagpry','job_type',
-                    'company_name', 'salary', 'publication_date',
+    desired_info = ['title','url','category','job_type',
+                    'company_name', 'publication_date',
                     'candidate_required_location']
 
     # print the response code to be sure
@@ -63,5 +63,11 @@ if __name__ == '__main__':
                 job[k] = v
         cleaned_jobs.append(job)
         i += 1
-    for item in cleaned_jobs:
-        print(item)
+
+#    for item in cleaned_jobs:
+#        print(item)
+
+    return (cleaned_jobs)
+
+if __name__ == '__main__':
+    remote_jobs_get()
