@@ -66,6 +66,46 @@ def refresh_remote(jobs=""):
 
     print("All done with remote jobs table")
 
+def refresh_ok():
+    """
+    A script to read a CSV file and put the
+    data into a SQL table
+    """
+    import csv
+    import MySQLdb
+    """
+    First we will connect to our database dB
+    Next we set up a cursor to access the database with
+    Finally we clear out any data in the table from the last
+    time we ran the script.
+    """
+    dB = MySQLdb.connect("localhost","root", "root", "BoomTown")
+    cursor = dB.cursor()
+    cursor.execute("TRUNCATE TABLE ok_jobs");
+    mycursor = dB.cursor()
+    sql = "INSERT INTO ok_jobs (title, company, location, job_link) VALUES (%s, %s, %s, %s)"
+
+    with open('developer_v2.csv') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        line_count = 0
+        for row in csv_reader:
+            if line_count == 0:
+                line_count += 1
+            elif '<header class="card__header">' in row[2]:
+                line_count += 1
+            else:
+                title = row[3]
+                job_link= row[4]
+                comp_loc = row[6].split('in ')
+                company = comp_loc[0].replace('at ', '')
+                location = comp_loc[1]
+                line_count += 1
+                val = (str(title), str(company), str(location), str(job_link))
+                mycursor.execute(sql, val)
+                dB.commit()
+    dB.close()
+    print("All {} rows read".format(line_count))
+    
 if __name__ == '__main__':
     """
     This will be our main guard which will import
@@ -82,3 +122,5 @@ if __name__ == '__main__':
     """
     remote_jobs = remote_jobs_get()
     refresh_remote(remote_jobs)
+    refresh_ok()
+    print("BoomTown jobs tables refreshed")"
