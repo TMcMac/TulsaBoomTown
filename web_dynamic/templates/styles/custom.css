@@ -8,6 +8,7 @@
 - Image Holder
 - Boxes
 - Headshot Boxes
+- icon links
 - Footer
 */
 
@@ -35,7 +36,7 @@
 }
 
 .centered-only {
-    text-align: centered;
+    text-align: center;
 }
 
 .textbox {
@@ -72,7 +73,18 @@
     margin-top: 35px;
 }
 
+.noMargin {
+    margin: 0px;
+}
 
+.marginBottom1rem {
+    margin-bottom: 1rem;
+}
+
+.middle {
+    vertical-align: middle;
+    margin: auto;
+}
 /* Navigation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .navigation {
@@ -282,7 +294,7 @@ header {
 
     background-position: center;
     background-image: url(../images/headshot--blake.jpeg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -295,7 +307,7 @@ header {
 
     background-position: center;
     background-image: url(../images/headshot--jacob.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -308,7 +320,7 @@ header {
 
     background-position: center;
     background-image: url(../images/headshot--reese.jpeg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -321,8 +333,41 @@ header {
 
     background-position: center;
     background-image: url(../images/headshot--tim.png);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+}
+
+.headshotBox--Hannah {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+
+    background-position: center;
+    background-image: url(../images/headshot--hannah.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* icon links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.github-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons8-github-24.png);
+    background-size: cover;
+    float: left;
+    margin: 5px 10px 0 0;
+}
+
+.linkedIn-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons8-linkedin-24.png);
+    background-size: cover;
+    float:left;
+    margin: 5px 0 0 0;
 }
 
 /* Footer
