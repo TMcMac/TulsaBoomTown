@@ -1,12 +1,26 @@
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
+- Logo Styling
 - Text Styling
+- Margin Add-Ons
 - Navigation
 - Header
 - Image Holder
 - Boxes
+- Headshot Boxes
+- icon links
 - Footer
 */
+
+/* Logo Styling
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.logo {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-top: -70px;
+}
+
 
 /* Text Styling
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -22,7 +36,7 @@
 }
 
 .centered-only {
-    text-align: centered;
+    text-align: center;
 }
 
 .textbox {
@@ -32,8 +46,7 @@
 }
 
 .textbox-centered {
-    border: 1px solid black;
-    margin: 30px 0 0 0;
+    margin: 0px;
     padding: 10px;
     text-align: center;
 }
@@ -48,6 +61,29 @@
 
 .display-none {
     visibility: hidden;
+}
+
+.marginNone {
+    margin: 0px;
+}
+
+/* Margin Add-Ons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.marginTop35 { 
+    margin-top: 35px;
+}
+
+.noMargin {
+    margin: 0px;
+}
+
+.marginBottom1rem {
+    margin-bottom: 1rem;
+}
+
+.middle {
+    vertical-align: middle;
+    margin: auto;
 }
 /* Navigation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -74,7 +110,7 @@ a {
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
-    height: 40px;
+    height: 45px;
     border-bottom: black solid 1px;
 }
 
@@ -91,14 +127,54 @@ header {
 
 /* Boxes
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.oppertunities_box {
+/* Oppertunities to Learn and Grow
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.oppBox-tulsaRemote {
+    background-image: url(../images/tulsaRemote.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
     width: 100%;
     height: 400px;
     margin: 10px 0 0 0;
     border: 1px black solid;
-    background-color: rgb(155, 155, 155);
 }
 
+.oppBox-holberton {
+    background-image: url(../images/holberton.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 400px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+}
+
+.oppBox-36DNorth {
+    background-image: url(../images/36North-400x400.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 400px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+}
+
+.oppBox-fifthFloor {
+    background-image: url(../images/cityHall.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 400px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+}
+
+/* Carousel
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .carousel-box {
     width: 100%;
     height: 250px;
@@ -107,20 +183,99 @@ header {
     background-color: rgb(155, 155, 155);
 }
 
-.t-combinator_box {
+/* Tech Associations and Groups
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.techAssoc_box--Techlahoma {
     width: 100%;
     height: 250px;
     margin: 10px 0 0 0;
     border: 1px black solid;
-    background-color: rgb(155, 155, 155);
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+
+    background-image: url(../images/techlahoma.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
-.offer_box {
+.techAssoc_box--TulsaInnoLabs {
+    width: 100%;
+    height: 250px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: #001f28;
+    background-position: center;
+
+    background-image: url(../images/tulsaInnoLabs.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.techAssoc_box--WomeninTech {
+    width: 100%;
+    height: 250px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: #fff;
+    background-position: center;
+
+    background-image: url(../images/womenInTech.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.techAssoc_box--TYPROS {
+    width: 100%;
+    height: 250px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color:#42c5d2;
+    background-position: center;
+
+    background-image: url(../images/typros.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* What Tulsa has to Offer Boxes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.offer_box-route66 {
     width: 100%;
     height: 250px;
     margin: 20px 0 0 0;
     border: 1px black solid;
     background-color: rgb(155, 155, 155);
+    background-position: center;
+
+    background-image: url(../images/OK66.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.offer_box-gathering {
+    width: 100%;
+    height: 250px;
+    margin: 20px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+    background-position: center;
+
+    background-image: url(../images/gatheringPlace.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.offer_box-arts-n-culture {
+    width: 100%;
+    height: 250px;
+    margin: 20px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+    background-position: center;
+
+    background-image: url(../images/liveMusic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .offer_box_text {
@@ -128,10 +283,97 @@ header {
     margin: 20px 0 0 0;
 }
 
+/* Headshot Boxes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.headshotBox--Blake {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+
+    background-position: center;
+    background-image: url(../images/headshot--blake.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.headshotBox--Jacob {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+
+    background-position: center;
+    background-image: url(../images/headshot--jacob.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.headshotBox--Reese {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+
+    background-position: center;
+    background-image: url(../images/headshot--reese.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.headshotBox--Tim {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0 0 0;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+
+    background-position: center;
+    background-image: url(../images/headshot--tim.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.headshotBox--Hannah {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    border: 1px black solid;
+    background-color: rgb(155, 155, 155);
+
+    background-position: center;
+    background-image: url(../images/headshot--hannah.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* icon links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.github-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons8-github-24.png);
+    background-size: cover;
+    float: left;
+    margin: 5px 10px 0 0;
+}
+
+.linkedIn-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons8-linkedin-24.png);
+    background-size: cover;
+    float:left;
+    margin: 5px 0 0 0;
+}
+
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 footer {
-    height: 200px;
+    height: 100vh;
     width: 100%;
     background-color: black;
     margin: 30px 0 0 0;
