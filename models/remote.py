@@ -6,7 +6,7 @@ import sqlalchemy
 from sqlalchemy import Column, String
 
 
-class Job(BaseModel, Base):
+class Remote(BaseModel, Base):
     """ representation of a Company """
     __tablename__ = "remote_jobs"
     title = Column(String(100), nullable=True)
