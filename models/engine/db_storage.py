@@ -4,12 +4,13 @@
 import models
 from models.base_model import BaseModel, Base
 from models.company import Company
-from models.job import Job
+from models.remote import Remote
+from models.local import Local
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-classes = {"Company": Company, "Job": Job}
+classes = {"Company": Company, "Remote": Remote, "Local": Local}
 
 class DBStorage:
     """interaacts with the MySQL database"""

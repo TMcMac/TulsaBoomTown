@@ -105,7 +105,7 @@ def refresh_ok():
                 dB.commit()
     dB.close()
     print("All {} rows read".format(line_count))
-    
+
 if __name__ == '__main__':
     """
     This will be our main guard which will import
@@ -123,4 +123,4 @@ if __name__ == '__main__':
     remote_jobs = remote_jobs_get()
     refresh_remote(remote_jobs)
     refresh_ok()
-    print("BoomTown jobs tables refreshed")"
+    print("BoomTown jobs tables refreshed")
