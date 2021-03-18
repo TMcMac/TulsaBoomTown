@@ -285,69 +285,43 @@ header {
 
 /* Headshot Boxes
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.headshotBox--Blake {
-    width: 100%;
-    height: 200px;
+.about > ol {
+    padding: 0px 35px;
+}
+
+.eight.columns > h4 {
+    margin-top: 40px;
+}
+
+.headshotBox {
+    width: 256px;
+    height: 256px;
     margin: 10px 0 0 0;
     border: 1px black solid;
+    border-radius: 50%;
     background-color: rgb(155, 155, 155);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
-    background-position: center;
+.Blake {
     background-image: url(../images/headshot--blake.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.headshotBox--Jacob {
-    width: 100%;
-    height: 200px;
-    margin: 10px 0 0 0;
-    border: 1px black solid;
-    background-color: rgb(155, 155, 155);
-
-    background-position: center;
+.Jacob {
     background-image: url(../images/headshot--jacob.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.headshotBox--Reese {
-    width: 100%;
-    height: 200px;
-    margin: 10px 0 0 0;
-    border: 1px black solid;
-    background-color: rgb(155, 155, 155);
-
-    background-position: center;
+.Reese {
     background-image: url(../images/headshot--reese.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.headshotBox--Tim {
-    width: 100%;
-    height: 200px;
-    margin: 10px 0 0 0;
-    border: 1px black solid;
-    background-color: rgb(155, 155, 155);
-
-    background-position: center;
+.Tim {
     background-image: url(../images/headshot--tim.png);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.headshotBox--Hannah {
-    width: 60px;
-    height: 60px;
-    margin: auto;
-    border: 1px black solid;
-    background-color: rgb(155, 155, 155);
-
-    background-position: center;
+.Hannah {
     background-image: url(../images/headshot--hannah.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 /* icon links
