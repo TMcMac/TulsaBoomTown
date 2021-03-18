@@ -1,10 +1,21 @@
+let index = -1;
+let limit;
 $(document).ready(function () {
+
+  $('button.right').click(function () {
+    move_index(1);
+  });
+
+  $('button.left').click(function () {
+    move_index(-1);
+  });
 
   $.ajax({
     url: 'https://tulsaboomtown.tech/api/companies',
     type: 'GET',
     success: function (data) {
       populate(data);
+      move_index(1);
     },
     error: function () {
       failure();
@@ -13,10 +24,26 @@ $(document).ready(function () {
 
 });
 
+function move_index (offset) {
+  const prev = $('ul.slides li')[index];
+  index = index + offset;
+  if (index === -1) {
+    index = limit;
+  } else if (index === limit + 1) {
+    index = 0;
+  }
+  const next = $('ul.slides li')[index];
+  $(prev).addClass('exit');
+  $(next).addClass('enter');
+  $(prev).removeClass('enter');
+  $(prev).removeClass('exit');
+}
+
 function populate (data) {
   let i;
   const out = $('ul.slides');
   out.empty();
+  limit = data.length - 1;
   for (i = 0; i < data.length; i++) {
     const card = sanitize(data[i]);
     let inner = `<li class='slide'><div class='slide-content'><h2 class='slide-title'>${card[0]}</h2>`;
