@@ -107,6 +107,39 @@ a {
     text-decoration: none;
 }
 
+/* Larger than mobile */
+@media screen and (max-width: 800px) {
+    .navigation{
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    li.navigation {
+        display:block;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #000;
+        float: none;
+        margin: 0;
+        padding: 10px 0 10px 0;
+    }
+
+    .navigation .slash:after {
+        display:none;
+    }
+
+    header {
+        height: 100% !important;
+        border-bottom: none !important;
+    }
+
+    .logo {
+        display:none;
+    }
+
+}
+
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
