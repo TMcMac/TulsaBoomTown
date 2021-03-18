@@ -1,6 +1,6 @@
 # Tulsa BoomTown
 
-### Summery
+### Summary
 Hi, thanks for checking out the repo for our project TulsaBoomTown.tech
 
 This project was the final submission for Reese Hicks, Tim McMacken, Blake Stewart, and Jacob Wagner for Holberton Tulsa, Cohort 12. The concept for this project is to bring more attention to the growing tech sector in Tulsa Oklahoma and highlighted some of the great things about our city. Our mission of amplifying the message that Tulsa is the next great American tech city led us to focus on 4 major factors that we want to share with everyone.
@@ -16,7 +16,7 @@ In addition to the HTML, CSS, and JavaScript that make up our website we also ut
 
 Finally, we used python and the tweepy package to build out a Twitter bot that would further amplify our message and life Tulsa up. Our bot goes by the handle @TulsaBoomTown and you can interact with it on twitter.com
 
-### Packages / Pre-requisites
+### Packages / Prerequisites
 * HTML 5
 * CSS 3
 * Python 3.5
@@ -24,8 +24,8 @@ Finally, we used python and the tweepy package to build out a Twitter bot that w
 * MySQLdb
 * Tweepy
 
-### Acknoledgements
-Special thanks to Tori Buris for help with local company data. [Hannah Drobek](https://tulsaboomtown.tech/hannahdrobek.myportfolio.com) for her work designing our logo. Also, big thanks to all the local companies that took the time to message us back sharing their details so we could list them on the page.
+### Acknowledgements
+Special thanks to Tori Buris for help with local company data. [Hannah Drobek](hannahdrobek.myportfolio.com) for her work designing our logo. Also, big thanks to all the local companies that took the time to message us back sharing their details so we could list them on the page.
 
 ### Authors
 * Blake Stewart [Acochisse](https://github.com/Acochisse)
