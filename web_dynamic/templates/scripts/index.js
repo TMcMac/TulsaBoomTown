@@ -54,8 +54,8 @@ function populate (data) {
       inner += `<p class='employees'><strong>Number of Employees: </strong>${card[3]}</p>`;
     inner += `<p class='co-link'><strong>Website: </strong><a href='${card[4]}'>${card[4]}</a></p>`;
     if (card[5])
-      inner += `<p class='job-link'><strong>Job Board Link: </strong><a href='${card[5]}'>${card[5]}</a></p></div>`;
-    inner += `<p class='company-logo'><img src='images/logos/${card[6]}' alt='${card[0]} Logo'></p></li>`;
+      inner += `<p class='job-link'><strong>Job Board Link: </strong><a href='${card[5]}'>${card[5]}</a></p>`;
+    inner += `</div><p class='company-logo'><img src='images/logos/${card[6]}' alt='${card[0]} Logo'></p></li>`;
     out.append(inner);
   }
 }
