@@ -1,8 +1,18 @@
+/* Table of Contents:
+-----------------------------------------------------
+- Button Functions
+- Populate Remote Jobs
+- Populate Local Jobs
+- Sanitize Data
+- On Failure
+*/
+
+/* Button Funcitons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 let local = [];
 let remote = [];
 
 $(document).ready(function () {
-
   $('button.local').click(function () {
     populate_local();
   });
@@ -22,9 +32,10 @@ $(document).ready(function () {
       failure();
     }
   });
-
 });
 
+/* Populate Remote Jobs
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 function populate_remote () {
   let i;
   const out = $('div.job-display');
@@ -37,22 +48,18 @@ function populate_remote () {
   for (i = 0; i < remote.length; i++) {
     const card = remote[i];
     let inner = `<div class='slide-content'><h3 class='slide-title'>${card[0]}</h3>`;
-    if (card[1])
-      inner += `<p><strong>Company: </strong>${card[1]}</p>`;
-    if (card[2])
-      inner += `<p><strong>Job Type: </strong>${card[2]}</p>`;
-    if (card[3])
-      inner += `<p><strong>Job Category: </strong>${card[3]}</p>`;
-    if (card[4])
-      inner += `<p><strong>Job Location: </strong>${card[4]}</p>`;
-    if (card[5])
-      inner += `<p><strong>Publication Date: </strong>${card[5]}</p>`;
-    if (card[6])
-      inner += `<p><a href='${card[6]}'><strong>Apply Now!</strong></a></p></div>`;
+    if (card[1]) { inner += `<p><strong>Company: </strong>${card[1]}</p>`; }
+    if (card[2]) { inner += `<p><strong>Job Type: </strong>${card[2]}</p>`; }
+    if (card[3]) { inner += `<p><strong>Job Category: </strong>${card[3]}</p>`; }
+    if (card[4]) { inner += `<p><strong>Job Location: </strong>${card[4]}</p>`; }
+    if (card[5]) { inner += `<p><strong>Publication Date: </strong>${card[5]}</p>`; }
+    if (card[6]) { inner += `<p><a href='${card[6]}'><strong>Apply Now!</strong></a></p></div>`; }
     out.append(inner);
   }
 }
 
+/* Populate Local Jobs
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 function populate_local () {
   let i;
   const out = $('div.job-display');
@@ -72,6 +79,8 @@ function populate_local () {
   }
 }
 
+/* Sanitize Data
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 function sanitize (data) {
   let card;
   let i;
@@ -87,12 +96,10 @@ function sanitize (data) {
     card[5] = temp[i].publication_date;
     card[6] = temp[i].url;
 
-    if (!card[0])
-      card[0] = "Employee";
-    if (card[2])
-      card[2] = card[2].replace("_", " ");
+    if (!card[0]) { card[0] = 'Employee'; }
+    if (card[2]) { card[2] = card[2].replace('_', ' '); }
     if (card[5]) {
-      card[5] = card[5].slice(5, 7) + "/" + card[5].slice(8, 10) + "/" + card[5].slice(0, 4);
+      card[5] = card[5].slice(5, 7) + '/' + card[5].slice(8, 10) + '/' + card[5].slice(0, 4);
     }
     remote[i] = card;
   }
@@ -108,6 +115,8 @@ function sanitize (data) {
   }
 }
 
+/* On Failure
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 function failure () {
   local = null;
   remote = null;
