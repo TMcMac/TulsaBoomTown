@@ -4,6 +4,7 @@ This script will pull in remote jobs and
 then load them into a SQL table remote_jobs
 """
 
+
 def refresh_remote(jobs=""):
     import MySQLdb
 
@@ -13,7 +14,7 @@ def refresh_remote(jobs=""):
     Finally we clear out any data in the table from the last
     time we ran the script.
     """
-    dB = MySQLdb.connect("localhost","root", "root", "BoomTown")
+    dB = MySQLdb.connect("localhost", "root", "root", "BoomTown")
     cursor = dB.cursor()
     cursor.execute("TRUNCATE TABLE remote_jobs");
 
@@ -24,22 +25,25 @@ def refresh_remote(jobs=""):
     """
     for job in jobs:
         """
-        The first thing we do is set a number of placeholdes according to dict length
-        this is so we can fill in the values later
+        The first thing we do is set a number of placeholdes according to
+        dict length this is so we can fill in the values later
         Next we set the columns equal to a string made up of all
         the keys in ouf job dict
-        Finally we add our columns and our placeholders to a premade SQL statement
+        Finally we add our columns and our placeholders to a premade SQL
+        statement
         """
         placeholders = ', '.join(['%s'] * len(job))
         columns = ', '.join(job.keys())
-        sql = "INSERT INTO remote_jobs (%s) VALUES (%s)" % (columns, placeholders)
+        sql = "INSERT INTO remote_jobs (%s) VALUES (%s)" % (columns,
+                                                            placeholders)
         """
-        VLS will be a list of values that will take the place of our placeholders
+        VLS will be a list of values that will take the place of our
+        placeholders
         We will cycle through our job dict values and make sure there are no
         non-ascii characters as this can break our MySQLdb parser.
-        If we his a non ASCII string or empty string we'll count it as a None.
-        it would be good to fix this in a future version as this is not a good or
-        fair solution going with english/arabic alphabet only.
+        If we hit a non ASCII string or empty string we'll count it as a None.
+        it would be good to fix this in a future version as this is not a good
+        or fair solution going with english/arabic alphabet only.
         """
 
         vls = []
@@ -66,6 +70,7 @@ def refresh_remote(jobs=""):
 
     print("All done with remote jobs table")
 
+
 def refresh_ok():
     """
     A script to read a CSV file and put the
@@ -79,7 +84,7 @@ def refresh_ok():
     Finally we clear out any data in the table from the last
     time we ran the script.
     """
-    dB = MySQLdb.connect("localhost","root", "root", "BoomTown")
+    dB = MySQLdb.connect("localhost", "root", "root", "BoomTown")
     cursor = dB.cursor()
     cursor.execute("TRUNCATE TABLE ok_jobs");
     mycursor = dB.cursor()
@@ -95,7 +100,7 @@ def refresh_ok():
                 line_count += 1
             else:
                 title = row[3]
-                job_link= row[4]
+                job_link = row[4]
                 comp_loc = row[6].split('in ')
                 company = comp_loc[0].replace('at ', '')
                 location = comp_loc[1]

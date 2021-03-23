@@ -1,14 +1,30 @@
 #!/usr/bin/env python3
+"""
+This is a script to pull data from the remotive.io
+jobs site via their API
+"""
+
 
 def remote_jobs_get():
+    """
+    This method will put together a query string for the remotive.io
+    API and then send a GET request
+    The function will then put the information into a usable format
+    with only details we want for oursite.
+    This module returns the info to refreshJobs.py
+    """
     import json
     import requests
 
     base_url = 'https://remotive.io/api/remote-jobs?'
-    company = "" #this can be included as: 'company_name=<name>' to search for a specific company
-    search = "" #this can be included as: 'search=front%20end' to look for a specific keyword(s)
-    limit = "limit=50" #this can be included as: 'limit=5' to limit results
-    category = "category=software-dev" #this can be included in the url as: 'category=software-dev' to search a catagory
+    # This can be: 'company_name=<name>' to search for a specific company
+    company = ""
+    # This can be: 'search=front%20end' to look for a specific keyword(s)
+    search = ""
+    # This can be included as: 'limit=5' to limit results
+    limit = "limit=50"
+    # This can be in the url: 'category=software-dev' to search a catagory
+    category = "category=software-dev"
     """
     The catagories that we can use are a specific list as follows:
     {"id": 19, "name": "Software Development", "slug": "software-dev"},
@@ -46,15 +62,21 @@ def remote_jobs_get():
     # cleaned_jobs is a list of job dicts with only the basic relevant data
     cleaned_jobs = []
 
-    # desired info are the things we want out of the raw jobs data, description is something we should add but it is a mess of html
-    desired_info = ['title','url','category','job_type',
+    """
+    desired info are the things we want out of the raw jobs data, description
+    is something we should add but it is a mess of html
+    """
+    desired_info = ['title', 'url', 'category', 'job_type',
                     'company_name', 'publication_date',
                     'candidate_required_location']
 
     # print the response code to be sure
     print(r)
 
-    #loop through the raw jobs list and gather the necessary info into a new dict and append to cleaned jobs
+    """
+    loop through the raw jobs list and gather the necessary info
+    into a new dict and append to cleaned jobs
+    """
     while(i < len(jobs)):
         job_data = payload['jobs'][i]
         job = {}
@@ -64,10 +86,10 @@ def remote_jobs_get():
         cleaned_jobs.append(job)
         i += 1
 
-#    for item in cleaned_jobs:
-#        print(item)
-
     return (cleaned_jobs)
 
 if __name__ == '__main__':
+    """
+    This is an import gaurd for this function
+    """
     remote_jobs_get()
