@@ -1,7 +1,17 @@
+/* Table of Contents:
+-----------------------------------------------------
+- Button Functionality
+- Move Slide
+- Populate Data
+- Sanitize Data
+- Function Failure
+*/
+
+/* Button Functionality
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 let index = -1;
 let limit;
 $(document).ready(function () {
-
   $('button.right').click(function () {
     move_index(1);
   });
@@ -21,9 +31,10 @@ $(document).ready(function () {
       failure();
     }
   });
-
 });
 
+/* Move Slide
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 function move_index (offset) {
   const prev = $('ul.slides li')[index];
   index = index + offset;
@@ -39,6 +50,8 @@ function move_index (offset) {
   $(prev).removeClass('exit');
 }
 
+/* Populate Data
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 function populate (data) {
   let i;
   const out = $('ul.slides');
@@ -48,18 +61,17 @@ function populate (data) {
     const card = sanitize(data[i]);
     let inner = `<li class='slide'><div class='slide-content'><h2 class='slide-title'>${card[0]}</h2>`;
     inner += `<p class='industries'><strong>Industry: </strong>${card[1]}</p>`;
-    if (card[2])
-      inner += `<p class='tech-stack'><strong>Tech Stack: </strong>${card[2]}</p>`;
-    if (card[3])
-      inner += `<p class='employees'><strong>Number of Employees: </strong>${card[3]}</p>`;
+    if (card[2]) { inner += `<p class='tech-stack'><strong>Tech Stack: </strong>${card[2]}</p>`; }
+    if (card[3]) { inner += `<p class='employees'><strong>Number of Employees: </strong>${card[3]}</p>`; }
     inner += `<p class='co-link'><strong>Website: </strong><a href='${card[4]}'>${card[4]}</a></p>`;
-    if (card[5])
-      inner += `<p class='job-link'><strong>Job Board Link: </strong><a href='${card[5]}'>${card[5]}</a></p>`;
+    if (card[5]) { inner += `<p class='job-link'><strong>Job Board Link: </strong><a href='${card[5]}'>${card[5]}</a></p>`; }
     inner += `</div><p class='company-logo'><img src='images/logos/${card[6]}' alt='${card[0]} Logo'></p></li>`;
     out.append(inner);
   }
 }
 
+/* Sanitize Data
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 function sanitize (data) {
   const out = [];
   out[0] = data.name;
@@ -73,6 +85,8 @@ function sanitize (data) {
   return out;
 }
 
+/* On Failure
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 function failure () {
   console.log('No company data found.');
 }
