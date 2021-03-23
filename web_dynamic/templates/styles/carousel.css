@@ -1,3 +1,14 @@
+  /* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Sliders
+- Controls
+- Buttons
+- Slides
+- Slide Animations
+*/
+  
+/* Sliders
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
   .slider {
     position: relative;
     width: 100%;
@@ -8,6 +19,8 @@
     overflow: hidden;
   }
   
+  /* Controls
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
   .slider-controls {
     position: absolute;
     bottom: 0px;
@@ -41,6 +54,8 @@
     transition: background-color 0.2s linear;
   }
   
+  /* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
   #btn-1:checked ~ .slider-controls label[for="btn-1"] {
     background-color: #33C3F0;
   }
@@ -57,8 +72,8 @@
       line-height: 1rem;
   }
 
-  /* SLIDES */
-  
+ /* Slides
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
   .slides {
     list-style: none;
     padding: 0;
@@ -105,7 +120,8 @@
     float: right;
   }
   
-  /* Slide animations */  
+/* Slide Animations
+–––––––––––––––––––––––––––––––––––––––––––––––––– */  
   .enter {
     transform: translatex(0);
     opacity: 1;
